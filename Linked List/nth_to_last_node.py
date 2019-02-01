@@ -27,6 +27,6 @@ b.next_node = c
 c.next_node = d
 d.next_node = e
 
-# This would return the node d with a value of 4, because its the 2nd to last node.
+# Should print 4 on the console
 target_node = nth_to_last_node(2, a) 
 print(target_node.value)
