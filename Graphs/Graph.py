@@ -33,11 +33,11 @@ class Graph:
         else:
             return None
         
-    def addEdge(self, fromVertex, toVertex, weight):
+    def addEdge(self, fromVertex, toVertex, weight=0):
         if fromVertex not in self.verticesList:
             self.addVertex(fromVertex)
         if toVertex not in self.verticesList:
-            self.verticesList(toVertex)
+            self.addVertex(toVertex)
         self.verticesList[fromVertex].addNeighbour(self.verticesList[toVertex], weight)
         
     def getVertices(self):
