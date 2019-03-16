@@ -33,6 +33,6 @@ print(list(bfs_path(graph, 'A', 'F')))
 def bfs_shortest(graph, start, goal):
     try:
         return next(bfs_path(graph, start, goal))
-    except:
+    except StopIteration:
         return None
 print(list(bfs_shortest(graph, 'A', 'F')))
