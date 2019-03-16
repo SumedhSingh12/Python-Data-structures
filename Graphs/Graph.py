@@ -2,7 +2,7 @@ class Vertex:
     
     def __init__(self, key):
         self.id = key
-        self.connectedTo = {}
+        self.connectedTo = {}					#{key=id, value=weight}
         
     def addNeighbour(self, neighbour, weight):
         self.connectedTo[neighbour] = weight
@@ -19,7 +19,7 @@ class Vertex:
 class Graph:
     
     def __init__(self):
-        self.verticesList = {}
+        self.verticesList = {}				#{key=Vertex(), value=id}
         self.noOfVertices = 0
         
     def addVertex(self,key):
