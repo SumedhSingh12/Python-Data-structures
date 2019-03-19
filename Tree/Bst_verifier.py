@@ -24,7 +24,7 @@ def verify_bst(node):
     if not node:
         return True
     else:
-        if (treeMax(node.left) <= node.key <= treeMin(node.right) and verify(node.left) and verify(node.right)):
+        if (treeMax(node.left) <= node.key <= treeMin(node.right) and verify_bst(node.left) and verify_bst(node.right)):
             return True
         else:
             return False
@@ -33,11 +33,11 @@ root= Node(10, "Ten")
 root.left = Node(5, "Five")
 root.right= Node(30, "Thirty")
 
-print(verify(root)) # prints True, since this tree is valid
+print(verify_bst(root)) # prints True, since this tree is valid
 
 root = Node(10, "Ten")
 root.right = Node(20, "Twenty")
 root.left = Node(5, "Five")
 root.left.right = Node(15, "Fifteen")
 
-print(verify(root)) # prints False, since 15 is to the left of 10
+print(verify_bst(root)) # prints False, since 15 is to the left of 10
