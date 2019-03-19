@@ -13,7 +13,7 @@ def level_order_print(node):
         current_count, next_count = 1,0
         nodes = collections.deque([node])
         while len(nodes) != 0:
-            currentNode = nodes.popleft()
+            currentNode = nodes.pop()
             current_count -= 1
             print(currentNode.val, end =" ")
             
