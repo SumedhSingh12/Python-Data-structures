@@ -1,3 +1,4 @@
+'''Number of possibilities for making the sum equal to value'''
 def count_sets(arr, value):
     return rec(arr, value, len(arr)-1)
 def rec(arr, value, i, mem={}):
