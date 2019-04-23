@@ -7,6 +7,7 @@ def reverse_sent(sentence):
             if i+1 < len(sentence) and sentence[i+1] == " ":
                 words.append(word)
                 word = ""
+    word += " "
     for i in range(len(words)):
         word += (words[len(words)-(1+i)])
         word += " "
