@@ -1,17 +1,13 @@
-#Run Length compression algorithm
-def compress_string(s):
-    r = ""
-    if len(s) == 0:
-        return ""
-    elif len(s) == 1:
-        return s + "1"
-    else:
-        letter_map = {}
-        for letter in s:
-            if letter in letter_map:
-                letter_map[letter] += 1
-            else:
-                letter_map[letter] = 1
-        for letter in letter_map:
-            r+= str(letter)+str(letter_map[letter])
-    return r
+def compress_str(s):
+    count = 1
+    res = s[0]
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            count += 1
+        else:
+            res += str(count)
+            res += s[i+1]
+            count = 1
+    res += str(count)
+    return res
+compress_str("AAABBCCA")
